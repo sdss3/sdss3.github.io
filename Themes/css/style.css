@@ -1,0 +1,110 @@
+.container{
+	width: 1100px;
+	margin: auto;
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	border-top: 5px #871ea1 solid;
+	background: #fff;
+	width: 100%;
+}
+nav{
+	padding-top:45px ;
+	padding-bottom: 75px;
+}
+nav a:hover{
+	text-decoration: none;
+}
+nav a {
+	font: 15px Arial;
+	color: #293a46;
+	margin-left: 60px;
+}
+.banner{
+	text-align: center;
+}
+h1{
+	font: 37px Arial;
+}
+.banner p{
+	font: 17px Arial;
+	color: #69718b;
+}
+.banner .btn-success {
+    color: #fff;
+    background-color: #6b15a1;
+    padding: 10px 15px;
+    margin-bottom: 120px;
+    border: none;
+}
+.banner .btn-success:hover {
+    color: #fff;
+    background-color: #000;
+}
+.row{
+	padding-bottom: 120px;
+}
+section{
+	text-align: center;
+}
+h2{
+	font:20px Arial;
+	padding-bottom: 50px;
+}
+.text img{
+	border-radius: 5px;
+	width: 100%;
+}
+
+.text{
+	border: 1px #dddddd solid;
+	border-radius: 5px;
+}
+section .btn-success{
+	background-color: #6b15a1;
+	border: none;
+	margin: 30px 0px;
+}
+h5{
+	font: 15px Arial;
+	font-weight: bold;
+	margin-left: 40px;
+	padding-top: 20px;
+}
+.check p{
+	font: 13px Arial;
+	color: #977176;
+	margin-left: 40px;
+	padding-bottom: 20px;
+}
+.check{
+	border: 1px #dddddd solid;
+	border-top: 5px #6b15a1 solid;
+	margin-bottom: 80px;
+}
+.check::after,.check p::after{
+	display: table;
+	content: "";
+	clear: both;
+}
+.check button,.check p{
+	float: left;
+}
+.check button{
+	margin-left:450px;
+	margin-top: -30px;
+	background: #6b15a1;
+	border: none;
+}
+.footer-nav{
+	text-align: center;
+}
+.footer-nav a{
+	color: #6b15a1;
+}
+.footer-nav a:hover{
+	text-decoration: none;
+}

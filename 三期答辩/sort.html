@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>上选-sort</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="bootstrap-3.3.4-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="css/swiper-4.2.6.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="sort">
+    <!-----底部导航--->
+    <nav>
+        <ul>
+            <li>
+                <a href="index.html"><i class="fa fa-home"></i><span>首页</span></a>
+            </li>
+            <li class="active">
+                <a href="sort.html"><i class="fa fa-list-ul"></i><span>分类</span></a>
+            </li>
+            <li>
+                <a href="shop.html"><i class="fa fa-shopping-cart"></i><span>购物车</span></a>
+            </li>
+            <li>
+                <a href="login.html"><i class="fa fa-user-o"></i><span>我的</span></a>
+            </li>
+        </ul>
+    </nav>
+
+    <!--搜索条-->
+    <div class="search1">
+        <div class="left">
+            <i class="fa fa-search"></i>
+            <input type="text" placeholder="搜索商品">
+        </div>
+        <div class="right">
+            <span>搜索</span>
+        </div>
+    </div>
+    <div class="main" id="mainsort">
+        <div class="container-fuild">
+            <div class="row">
+                <div class="col-xs-4 sortnav">
+                    <ul class="sort-nav">
+                        <li class="color">食品酒类</li>
+                        <li>家居家装</li>
+                        <li>个护清洁</li>
+                        <li>母婴玩具</li>
+                        <li>家用电器</li>
+                        <li>钟表珠宝</li>
+                        <li>医药保健</li>
+                        <li>男装女装</li>
+                        <li>运动户外</li>
+                        <li>箱包手袋</li>
+                        <li>奢侈品</li>
+                        <li>汽车用品</li>
+                        <li>为您推荐</li>
+                    </ul>
+                </div>
+                <div class="col-xs-8 sort-list">
+                    <div class="act">
+                        <div>
+                            <h2>新鲜水果</h2>
+                            <div class="row">
+                                <div class="col-xs-4" v-for="ar in ars">
+                                    <a :href="ar.link">
+                                        <img :src="ar.img" alt="">
+                                        <p>{{ar.name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div>
+                            <h2>中外名酒</h2>
+                            <div class="row">
+                                <div class="col-xs-4" v-for="ar in ars1">
+                                    <a :href="ar.link">
+                                        <img :src="ar.img" alt="">
+                                        <p>{{ar.name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div>
+                            <h2>进口食品</h2>
+                            <div class="row">
+                                <div class="col-xs-4" v-for="ar in ars6">
+                                    <a :href="ar.link">
+                                        <img :src="ar.img" alt="">
+                                        <p>{{ar.name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h2>休闲食品</h2>
+                            <div class="row">
+                                <div class="col-xs-4" v-for="ar in ars2">
+                                    <a :href="ar.link">
+                                        <img :src="ar.img" alt="">
+                                        <p>{{ar.name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div>
+                            <h2>地方特产</h2>
+                            <div class="row">
+                                <div class="col-xs-4" v-for="ar in ars7">
+                                    <a :href="ar.link">
+                                        <img :src="ar.img" alt="">
+                                        <p>{{ar.name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h2>茗茶</h2>
+                            <div class="row">
+                                <div class="col-xs-4" v-for="ar in ars3">
+                                    <a :href="ar.link">
+                                        <img :src="ar.img" alt="">
+                                        <p>{{ar.name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div>
+                            <h2>饮料冲调</h2>
+                            <div class="row">
+                                <div class="col-xs-4" v-for="ar in ars4">
+                                    <a :href="ar.link">
+                                        <img :src="ar.img" alt="">
+                                        <p>{{ar.name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h2>粮油调味</h2>
+                            <div class="row">
+                                <div class="col-xs-4" v-for="ar in ars5">
+                                    <a :href="ar.link">
+                                        <img :src="ar.img" alt="">
+                                        <p>{{ar.name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div>
+                            <h2>海鲜水产</h2>
+                            <div class="row">
+                                <div class="col-xs-4" v-for="ar in ars8">
+                                    <a :href="ar.link">
+                                        <img :src="ar.img" alt="">
+                                        <p>{{ar.name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h2>冷冻食品</h2>
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <a href="">
+                                        <img src="img/1-10-1.png" alt="">
+                                        <p>冷冻食品</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h2>生鲜食品</h2>
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <a href="">
+                                        <img src="img/1-11-1.jpg" alt="">
+                                        <p>生鲜</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                <!--第二页-->
+                <div>
+                    <div>
+                        <h2>厨具</h2>
+                        <div class="row">
+                            <div class="col-xs-4" v-for="ar in ar1">
+                                <a :href="ar.link">
+                                    <img :src="ar.img" alt="">
+                                    <p>{{ar.name}}</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <h2>家纺</h2>
+                        <div class="row">
+                            <div class="col-xs-4" v-for="ar in ar2">
+                                <a :href="ar.link">
+                                    <img :src="ar.img" alt="">
+                                    <p>{{ar.name}}</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <h2>生活日用</h2>
+                        <div class="row">
+                            <div class="col-xs-4" v-for="ar in ar3">
+                                <a :href="ar.link">
+                                    <img :src="ar.img" alt="">
+                                    <p>{{ar.name}}</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <h2>五金电工</h2>
+                        <div class="row">
+                            <div class="col-xs-4" v-for="ar in ar4">
+                                <a :href="ar.link">
+                                    <img :src="ar.img" alt="">
+                                    <p>{{ar.name}}</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                    <!--第三页-->
+                    <div>
+                        <div>
+                            <h2>面部护肤</h2>
+                            <div class="row">
+                                <div class="col-xs-4" v-for="ar in arr1">
+                                    <a :href="ar.link">
+                                        <img :src="ar.img" alt="">
+                                        <p>{{ar.name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h2>洗发护发</h2>
+                            <div class="row">
+                                <div class="col-xs-4" v-for="ar in arr2">
+                                    <a :href="ar.link">
+                                        <img :src="ar.img" alt="">
+                                        <p>{{ar.name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div>
+                            <h2>身体护理</h2>
+                            <div class="row">
+                                <div class="col-xs-4" v-for="ar in arr3">
+                                    <a :href="ar.link">
+                                        <img :src="ar.img" alt="">
+                                        <p>{{ar.name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div>
+                            <h2>口腔护理</h2>
+                            <div class="row">
+                                <div class="col-xs-4" v-for="ar in arr4">
+                                    <a :href="ar.link">
+                                        <img :src="ar.img" alt="">
+                                        <p>{{ar.name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div>
+                            <h2>女性护理</h2>
+                            <div class="row">
+                                <div class="col-xs-4" v-for="ar in arr5">
+                                    <a :href="ar.link">
+                                        <img :src="ar.img" alt="">
+                                        <p>{{ar.name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h2>香水彩妆</h2>
+                            <div class="row">
+                                <div class="col-xs-4" v-for="ar in arr6">
+                                    <a :href="ar.link">
+                                        <img :src="ar.img" alt="">
+                                        <p>{{ar.name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h2>清洁用品</h2>
+                            <div class="row">
+                                <div class="col-xs-4" v-for="ar in arr7">
+                                    <a :href="ar.link">
+                                        <img :src="ar.img" alt="">
+                                        <p>{{ar.name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <!--第四页-->
+                    <div>
+                       
+                        <div>
+                            <h2>玩具</h2>
+                            <div class="row">
+                                <div class="col-xs-4" v-for="ar in ass">
+                                    <a :href="ar.link">
+                                        <img :src="ar.img" alt="">
+                                        <p>{{ar.name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h2>纸尿裤湿巾</h2>
+                            <div class="row">
+                                <div class="col-xs-4" v-for="ar in ass1">
+                                    <a :href="ar.link">
+                                        <img :src="ar.img" alt="">
+                                        <p>{{ar.name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h2>奶粉奶制品</h2>
+                            <div class="row">
+                                <div class="col-xs-4" v-for="ar in ass2">
+                                    <a :href="ar.link">
+                                        <img :src="ar.img" alt="">
+                                        <p>{{ar.name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h2>妈妈专区</h2>
+                            <div class="row">
+                                <div class="col-xs-4" v-for="ar in ass3">
+                                    <a :href="ar.link">
+                                        <img :src="ar.img" alt="">
+                                        <p>{{ar.name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h2>喂养用品</h2>
+                            <div class="row">
+                                <div class="col-xs-4" v-for="ar in ass4">
+                                    <a :href="ar.link">
+                                        <img :src="ar.img" alt="">
+                                        <p>{{ar.name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                    
+<!--                    第五页-->
+                   <div>
+                       <div>
+                           <h2>厨房小电</h2>
+                            <div class="row">
+                                <div class="col-xs-4" v-for="ar in a1">
+                                    <a :href="ar.link">
+                                        <img :src="ar.img" alt="">
+                                        <p>{{ar.name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                       </div>
+                       
+                       <div>
+                           <h2>个护健康</h2>
+                            <div class="row">
+                                <div class="col-xs-4" v-for="ar in a2">
+                                    <a :href="ar.link">
+                                        <img :src="ar.img" alt="">
+                                        <p>{{ar.name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                       </div>
+                       
+                        <div>
+                           <h2>厨卫大电</h2>
+                            <div class="row">
+                                <div class="col-xs-4" v-for="ar in a3">
+                                    <a :href="ar.link">
+                                        <img :src="ar.img" alt="">
+                                        <p>{{ar.name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                       </div>
+                       
+                        <div>
+                           <h2>生活电器</h2>
+                            <div class="row">
+                                <div class="col-xs-4" v-for="ar in a4">
+                                    <a :href="ar.link">
+                                        <img :src="ar.img" alt="">
+                                        <p>{{ar.name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                       </div>
+                       
+                        <div>
+                           <h2>空调</h2>
+                            <div class="row">
+                                <div class="col-xs-4" v-for="ar in a5">
+                                    <a :href="ar.link">
+                                        <img :src="ar.img" alt="">
+                                        <p>{{ar.name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                       </div>
+                       
+                       
+                   </div>
+                   
+<!--                   第六页-->
+                   <div>
+                       
+                        <div>
+                           <h2>钟表</h2>
+                            <div class="row">
+                                <div class="col-xs-4" v-for="ar in a61">
+                                    <a :href="ar.link">
+                                        <img :src="ar.img" alt="">
+                                        <p>{{ar.name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                       
+                        <div>
+                           <h2>黄金</h2>
+                            <div class="row">
+                                <div class="col-xs-4" v-for="ar in a62">
+                                    <a :href="ar.link">
+                                        <img :src="ar.img" alt="">
+                                        <p>{{ar.name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                           <h2>银饰</h2>
+                            <div class="row">
+                                <div class="col-xs-4" v-for="ar in a63">
+                                    <a :href="ar.link">
+                                        <img :src="ar.img" alt="">
+                                        <p>{{ar.name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                           <h2>翡翠玉石</h2>
+                            <div class="row">
+                                <div class="col-xs-4" v-for="ar in a64">
+                                    <a :href="ar.link">
+                                        <img :src="ar.img" alt="">
+                                        <p>{{ar.name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div>
+                           <h2>钻石</h2>
+                            <div class="row">
+                                <div class="col-xs-4" v-for="ar in a65">
+                                    <a :href="ar.link">
+                                        <img :src="ar.img" alt="">
+                                        <p>{{ar.name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div>
+                           <h2>铂金</h2>
+                            <div class="row">
+                                <div class="col-xs-4" v-for="ar in a66">
+                                    <a :href="ar.link">
+                                        <img :src="ar.img" alt="">
+                                        <p>{{ar.name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div>
+                           <h2>K金饰品</h2>
+                            <div class="row">
+                                <div class="col-xs-4" v-for="ar in a67">
+                                    <a :href="ar.link">
+                                        <img :src="ar.img" alt="">
+                                        <p>{{ar.name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                       
+                       
+                   </div>
+                   
+<!--                   第七页-->
+                    <div>
+                        
+                        <div>
+                           <h2>营养健康</h2>
+                            <div class="row">
+                                <div class="col-xs-4" v-for="ar in a71">
+                                    <a :href="ar.link">
+                                        <img :src="ar.img" alt="">
+                                        <p>{{ar.name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                           <h2>营养成分</h2>
+                            <div class="row">
+                                <div class="col-xs-4" v-for="ar in a72">
+                                    <a :href="ar.link">
+                                        <img :src="ar.img" alt="">
+                                        <p>{{ar.name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div>
+                           <h2>滋补养生</h2>
+                            <div class="row">
+                                <div class="col-xs-4" v-for="ar in a73">
+                                    <a :href="ar.link">
+                                        <img :src="ar.img" alt="">
+                                        <p>{{ar.name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div>
+                           <h2>护理护具</h2>
+                            <div class="row">
+                                <div class="col-xs-4" v-for="ar in a74">
+                                    <a :href="ar.link">
+                                        <img :src="ar.img" alt="">
+                                        <p>{{ar.name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div>
+                           <h2>隐形眼睛</h2>
+                            <div class="row">
+                                <div class="col-xs-4" v-for="ar in a75">
+                                    <a :href="ar.link">
+                                        <img :src="ar.img" alt="">
+                                        <p>{{ar.name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+<!--                   第八页-->
+                    <div>
+                         <div>
+                           <h2>男装</h2>
+                            <div class="row">
+                                <div class="col-xs-4" v-for="ar in a81">
+                                    <a :href="ar.link">
+                                        <img :src="ar.img" alt="">
+                                        <p>{{ar.name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                         <div>
+                           <h2>女装</h2>
+                            <div class="row">
+                                <div class="col-xs-4" v-for="ar in a82">
+                                    <a :href="ar.link">
+                                        <img :src="ar.img" alt="">
+                                        <p>{{ar.name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div>
+                           <h2>文胸</h2>
+                            <div class="row">
+                                <div class="col-xs-4" v-for="ar in a83">
+                                    <a :href="ar.link">
+                                        <img :src="ar.img" alt="">
+                                        <p>{{ar.name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                         <div>
+                           <h2>服饰配饰</h2>
+                            <div class="row">
+                                <div class="col-xs-4" v-for="ar in a84">
+                                    <a :href="ar.link">
+                                        <img :src="ar.img" alt="">
+                                        <p>{{ar.name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                         <div>
+                           <h2>眼镜配饰</h2>
+                            <div class="row">
+                                <div class="col-xs-4" v-for="ar in a85">
+                                    <a :href="ar.link">
+                                        <img :src="ar.img" alt="">
+                                        <p>{{ar.name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div>
+                           <h2>童装</h2>
+                            <div class="row">
+                                <div class="col-xs-4" v-for="ar in a86">
+                                    <a :href="ar.link">
+                                        <img :src="ar.img" alt="">
+                                        <p>{{ar.name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+<!--               第九页-->
+                   <div>
+                       
+                        <div>
+                           <h2>运动服饰</h2>
+                            <div class="row">
+                                <div class="col-xs-4" v-for="ar in a91">
+                                    <a :href="ar.link">
+                                        <img :src="ar.img" alt="">
+                                        <p>{{ar.name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div>
+                           <h2>运动鞋包</h2>
+                            <div class="row">
+                                <div class="col-xs-4" v-for="ar in a92">
+                                    <a :href="ar.link">
+                                        <img :src="ar.img" alt="">
+                                        <p>{{ar.name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                           <h2>户外鞋服</h2>
+                            <div class="row">
+                                <div class="col-xs-4" v-for="ar in a93">
+                                    <a :href="ar.link">
+                                        <img :src="ar.img" alt="">
+                                        <p>{{ar.name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                         <div>
+                           <h2>体育用品</h2>
+                            <div class="row">
+                                <div class="col-xs-4" v-for="ar in a94">
+                                    <a :href="ar.link">
+                                        <img :src="ar.img" alt="">
+                                        <p>{{ar.name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                   </div>
+<!--                   第十页-->
+                    <div>
+                       
+                        <div>
+                           <h2>潮流女包</h2>
+                            <div class="row">
+                                <div class="col-xs-4" v-for="ar in a101">
+                                    <a :href="ar.link">
+                                        <img :src="ar.img" alt="">
+                                        <p>{{ar.name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                           <h2>精品男包</h2>
+                            <div class="row">
+                                <div class="col-xs-4" v-for="ar in a102">
+                                    <a :href="ar.link">
+                                        <img :src="ar.img" alt="">
+                                        <p>{{ar.name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div>
+                           <h2>功能箱包</h2>
+                            <div class="row">
+                                <div class="col-xs-4" v-for="ar in a103">
+                                    <a :href="ar.link">
+                                        <img :src="ar.img" alt="">
+                                        <p>{{ar.name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+<!--                   第十一页-->
+                    <div>
+                        
+                        <div>
+                           <h2>大牌推荐</h2>
+                            <div class="row">
+                                <div class="col-xs-4" v-for="ar in a111">
+                                    <a :href="ar.link">
+                                        <img :src="ar.img" alt="">
+                                        <p>{{ar.name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                         <div>
+                           <h2>奢品分类</h2>
+                            <div class="row">
+                                <div class="col-xs-4" v-for="ar in a112">
+                                    <a :href="ar.link">
+                                        <img :src="ar.img" alt="">
+                                        <p>{{ar.name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+<!--               第十二页-->
+                   <div>
+                       
+                        <div>
+                           <h2>汽车装饰</h2>
+                            <div class="row">
+                                <div class="col-xs-4" v-for="ar in a121">
+                                    <a :href="ar.link">
+                                        <img :src="ar.img" alt="">
+                                        <p>{{ar.name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                         <div>
+                           <h2>美容清洗</h2>
+                            <div class="row">
+                                <div class="col-xs-4" v-for="ar in a122">
+                                    <a :href="ar.link">
+                                        <img :src="ar.img" alt="">
+                                        <p>{{ar.name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                         <div>
+                           <h2>维修保养</h2>
+                            <div class="row">
+                                <div class="col-xs-4" v-for="ar in a123">
+                                    <a :href="ar.link">
+                                        <img :src="ar.img" alt="">
+                                        <p>{{ar.name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                       
+                   </div>
+                   
+<!--                   第十三页-->
+                   <div class="recommend">
+                       
+                        <div>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <a href="">
+                                        <img src="img/tuijian-1.jpg" alt="">
+                                        <p class="p1">中兴（ZTE） 中兴 小鲜5 V0840  全网通4G智能老人手机 双卡双待 暗夜灰</p>
+                                        <p class="p2">￥587.00</p>
+                                    </a>
+                                </div>
+                                <div class="col-xs-6">
+                                    <a href="">
+                                        <img src="img/tuijian-2.jpg" alt="">
+                                        <p class="p1">【闷倒驴官方旗舰店】买一送三 闷倒驴白酒60度1.5L不锈钢葫芦烈酒</p>
+                                        <p class="p2">￥69.00</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <a href="">
+                                        <img src="img/tuijian-3.jpg" alt="">
+                                        <p class="p1">纽曼大功率户外广场舞音响 便携式无线蓝牙音箱低音炮 迷你手提拉杆音箱插卡收音机 超市微信收款提示器 黑色标配</p>
+                                        <p class="p2">￥99.00</p>
+                                    </a>
+                                </div>
+                                <div class="col-xs-6">
+                                    <a href="">
+                                        <img src="img/tuijian-4.jpg" alt="">
+                                        <p class="p1">第一卫  苹果X手机壳适用于iPhoneX防摔超薄电镀男女款软套透明硅胶保护磨砂抖音吃鸡 X透明款【送钢化膜】</p>
+                                        <p class="p2">￥35.00</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <a href="">
+                                        <img src="img/tuijian-5.jpg" alt="">
+                                        <p class="p1">月桐 情人节520礼物创意德芙巧克力礼盒装送女友星空棒棒糖果女生生日礼物送女友礼物 牵手款-520紫花巧克力</p>
+                                        <p class="p2">￥89.00</p>
+                                    </a>
+                                </div>
+                                <div class="col-xs-6">
+                                    <a href="">
+                                        <img src="img/tuijian-6.jpg" alt="">
+                                        <p class="p1">轩之梦 强光手电筒可充电式小型LED迷你变焦家用车载led户外调焦聚光远射王 手电筒+锂电池+直充</p>
+                                        <p class="p2">￥29.00</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <a href="">
+                                        <img src="img/tuijian-7.jpg" alt="">
+                                        <p class="p1">CHAOZHI 休闲裤男2018春夏新款韩版潮流运动小脚休闲男裤时尚修身百搭男裤 黑色 31</p>
+                                        <p class="p2">￥99.00</p>
+                                    </a>
+                                </div>
+                                <div class="col-xs-6">
+                                    <a href="">
+                                        <img src="img/tuijian-8.jpg" alt="">
+                                        <p class="p1">旁氏(POND’S)洗面奶(洁面乳) 亮采净澈系列 米粹润泽150g</p>
+                                        <p class="p2">￥20.80</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <a href="">
+                                        <img src="img/tuijian-9.jpg" alt="">
+                                        <p class="p1">柏西雅（BOXIYA) 休闲裤男2018新款韩版修身九分裤男士休闲长裤小脚裤子男裤BX1 灰色 30</p>
+                                        <p class="p2">￥118.00</p>
+                                    </a>
+                                </div>
+                                <div class="col-xs-6">
+                                    <a href="">
+                                        <img src="img/tuijian-10.jpg" alt="">
+                                        <p class="p1">少数派 荣耀10手机壳 电镀透明保护套全包防摔男软壳女个性薄潮款 【炫变蓝】</p>
+                                        <p class="p2">￥29.00</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <a href="">
+                                        <img src="img/tuijian-11.jpg" alt="">
+                                        <p class="p1">博朗 欧乐B（Oralb）电动牙刷头 EB20精准清洁型 4支装 适配2D/3D全部型号</p>
+                                        <p class="p2">￥129.00</p>
+                                    </a>
+                                </div>
+                                <div class="col-xs-6">
+                                    <a href="">
+                                        <img src="img/tuijian-12.jpg" alt="">
+                                        <p class="p1">绿箭（DOUBLEMINT）口香糖原味薄荷味100片300g*3袋装</p>
+                                        <p class="p2">￥50.90</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <a href="">
+                                        <img src="img/tuijian-13.jpg" alt="">
+                                        <p class="p1">飞科(FLYCO)FS375智能电动剃须刀 全身水洗刮胡刀</p>
+                                        <p class="p2">￥149.00</p>
+                                    </a>
+                                </div>
+                                <div class="col-xs-6">
+                                    <a href="">
+                                        <img src="img/tuijian-14.jpg" alt="">
+                                        <p class="p1">山水（SANSUI） T20无线蓝牙音箱手机小音响电脑笔记本免提通话器便携插卡低音炮 木纹</p>
+                                        <p class="p2">￥159.00</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <a href="">
+                                        <img src="img/tuijian-15.jpg" alt="">
+                                        <p class="p1">蒙奇奇 小米8手机壳保护套全包防摔磨砂外壳男女透明硅胶软款 适用于小米8/8se 小米8 【石墨黑 】全包保护 送钢化膜</p>
+                                        <p class="p2">￥28.00</p>
+                                    </a>
+                                </div>
+                                <div class="col-xs-6">
+                                    <a href="">
+                                        <img src="img/tuijian-16.jpg" alt="">
+                                        <p class="p1">美的（Midea）电热水瓶 304不锈钢电水壶 5L容量 多段温控电热水壶 双层防烫烧水壶PF701-50T</p>
+                                        <p class="p2">￥259.00</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <a href="">
+                                        <img src="img/tuijian-17.jpg" alt="">
+                                        <p class="p1">强光感应头灯 可充电式远射王  白黄光LED手电筒 米 头戴式矿灯夜钓灯钓鱼灯 室外户外家用大功率 白光 智能感应双开关系统 续航24小时 聚光远射</p>
+                                        <p class="p2">￥49.90</p>
+                                    </a>
+                                </div>
+                                <div class="col-xs-6">
+                                    <a href="">
+                                        <img src="img/tuijian-18.jpg" alt="">
+                                        <p class="p1">丝塔芙Cetaphil洁面乳118ml（洗面奶 化妆品护肤品 男女适用 温和 补水 保湿 敏感肌适用）</p>
+                                        <p class="p2">￥259.00</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <a href="">
+                                        <img src="img/tuijian-19.jpg" alt="">
+                                        <p class="p1">乐活时光（LEHUO）简易衣柜布单人小衣橱宿舍家用组装收纳组装储物 70窗帘款咖啡色</p>
+                                        <p class="p2">￥129.00</p>
+                                    </a>
+                                </div>
+                                <div class="col-xs-6">
+                                    <a href="">
+                                        <img src="img/tuijian-20.jpg" alt="">
+                                        <p class="p1">朝爵（CHAOJUE）帆布袋定做现货 手提环保袋拉链订制 棉麻购物袋LOGO定制cy 竖款 白色 35*40 【空白现货】 其他</p>
+                                        <p class="p2">￥99.00</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                   </div>
+               
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/swiper-4.2.6.min.js"></script>
+<script src="js/vue.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

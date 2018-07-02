@@ -1,0 +1,258 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*----底部导航-*/
+nav ul::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+nav li{
+    float: left;
+    list-style: none;
+    width: 25%;
+}
+nav .fa{
+    font-size: 24px;
+}
+nav span{
+    font-size: 12px;
+    display: block;
+}
+nav a{
+    text-decoration: none;
+    color: #5d5f6a;
+}
+nav a:hover,
+nav .active a{
+    color: #ff0000;
+}
+nav{
+    text-align: center;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 10;
+}
+nav ul{
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-top: 1px solid #ececec;
+    z-index: 100;
+    background-color: #fff;
+    margin-bottom: 0;
+}
+nav .fa{
+    position: relative;
+}
+.banner .login{
+    background: url(../img/login.jpg);
+    width: 100%;
+    text-align: center;
+    background-size: cover;
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+.banner .login img{
+    width: 60px;
+    height: 60px;
+    background: rgba(0,0,0,0.5);
+    border-radius: 5px;
+}
+.banner .login{
+    float: left;
+}
+
+/*
+.banner .login .message{
+    position: relative;
+}
+*/
+.banner .login .message a{
+    width: 50%;
+    text-align: center;
+    font-size: 18px;
+    display: block;
+    float: left;
+    position: relative;
+    top: 32px;
+    color: #fff;
+}
+.banner{
+    height: 175px;
+    width: 100%;
+}
+.banner .login .message:after{
+    display: table;
+    content: "";
+    clear: both;
+}
+.list-item{
+    margin: 0 17px;
+    padding: 5px 0 0;
+    border-bottom: 1px solid #ececec;
+    height: 50px;
+    overflow: hidden;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 400;
+}
+.list-item label{
+    position: static;
+    width: 100px;
+    text-align: center;
+    color: #aeaeae;
+    line-height: 40px;
+    display: inline-block;
+    font-weight: 100;
+}
+.list-item input{
+    padding: 0;
+    margin-left: 20px;
+    border: none;
+    display: inline-block;
+    outline: none;
+}
+
+.agreement{
+    padding-left: 17px;
+    padding-right: 17px;
+}
+.agreement p.rules .select-box {
+    position: static;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+i.select-box.selected {
+    border-color: #E63D59;
+    background: url(../img/commonbg.png) -5px -65px no-repeat #E63D59;
+    -webkit-background-size: 250px 250px;
+    background-size: 250px 250px;
+    background-color: #E63D59;
+}
+
+i.select-box{
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+     border-color: #E63D59;
+    border: 1px red solid;
+}
+
+.zhuce .btn{
+    color: #fff;
+    background: #E63D59;
+    line-height: 24px;
+    border: 1px solid #E63D59;
+    padding: 10px;
+    font-size: 14px;
+    display: block;
+}
+.color{
+    color: #000 !important;
+}
+.appear{
+    display: block;
+}
+.disappear{
+    display: none;
+}
+a:hover, a:focus {
+     text-decoration: none; 
+}
+.denglu p{
+    float: right;
+    padding-right: 17px;
+    padding-top: 15px;
+    font-size: 16px;
+}
+.denglu-btn a{
+    margin-top: 68px;
+    color: #fff;
+    background: #E63D59;
+    line-height: 24px;
+    border: 1px solid #E63D59;
+    padding: 10px;
+    font-size: 14px;
+    display: block;
+    text-align: center;
+    border-radius: 5px;
+}
+.denglu p a{
+    color: #999;
+}
+.recommend .recon-line{
+    width: 100%;
+    height: 1px;
+    background: #eee;
+    margin-bottom: 20px;
+}
+.recommend {
+    position: relative;
+    margin-top: 20px;
+    padding-bottom:60px;
+}
+.recommend img{
+    width: 100%;
+}
+.recommend h3{
+    background-color: #fff;
+    padding: 5px;
+    margin: 0px;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 16px;
+    color: #848689;
+}
+.recommend .p1{
+/*
+    height: 40px;
+    width: 100%;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+*/
+    height: 33px;
+    font-size: 13px;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-break: break-word;
+    color: #232326;
+    margin-top: 5px;
+    line-height: 17px;    
+}
+.recommend .p2{
+    color: #f23030;
+    display: inline-block;
+    top: 1px;
+    height: 25px;
+    line-height: 25px;
+    margin-bottom: 0;
+    font-size: 18px;
+}
+.recommend-bg img{
+    width: 100%;
+}
+.recommend .row{
+    margin-left: -5px;
+    margin-right: -5px;
+}
+.recommend .col-md-6{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+

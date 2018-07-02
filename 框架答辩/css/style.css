@@ -1,0 +1,264 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #ececec;
+}
+
+/*导航*/
+.navbar-default {
+    background-color:#00bbd3;
+    border:none;
+}
+.navbar-fixed-top{
+    margin-bottom: 0;
+}
+.navbar-fixed-top h1{
+    margin: 0;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    background-color: transparent;
+    color: #000;
+}
+.navbar-default .navbar-nav>li>a {
+    color:#fff;
+}
+.navbar-header img {
+    vertical-align: initial;
+}
+.navbar-header span {
+    font-size: 50px;
+    font-family:  Gabriola;
+    font-weight: bold;
+    color: #fff;
+/*    padding-top:3px;*/
+}
+nav{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+    font-size: 26px;
+/*    line-height: 60px;*/
+    font-family: Gabriola;
+}
+.navbar-toggle{
+    background: #000;
+}
+.navbar-default .navbar-toggle {
+    border-color: #000;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+.navbar-default .navbar-toggle:focus {
+    background-color: #000;
+}
+@media(max-width:768px){
+	.navbar-fixed-top h1 {
+        margin-left: 15px;
+    }
+    nav{
+        padding-top: 5px;
+        padding-bottom:5px;
+    }
+}
+
+
+/*banner部分*/
+.navbar-fixed-top{
+    position: static;
+}
+.banner{
+    background-image: url(../images/2.jpg);
+    background-size: cover;
+    width: 100%;
+/*    height: 685px;*/
+    padding-top:295px;
+    padding-bottom: 295px;
+}
+.banner p{
+    color: #fff;
+}
+.banner #banner-one{
+    background: rgba(255,255,255,0.2);
+    line-height: 30px;
+    font-size: 16px;
+    text-align: center;
+}
+.banner #banner-two{
+    font-size: 34px;
+    text-align: center;
+}
+@media(max-width: 768px){
+    .banner {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .banner #banner-one{
+        line-height: 1.4em;
+        font-size: 16px;
+    }
+    .banner #banner-two{
+        font-size: 28px;
+    }
+}
+
+
+/*main部分*/
+.main h3{
+    text-align: center;
+    color: #000;
+    font-size: 3em;
+    /*text-transform: capitalize;*/
+    font-family: Gabriola;
+    line-height: 1.4em;
+}
+.main .im{
+    /*background: #1E1E1E;*/
+    padding-top: 10px;
+    width: 68px;
+    height: 68px;
+    background: #1E1E1E;
+    margin: 0 auto;
+    padding: 1em 0;
+    border-radius: 60px;
+    text-align: center;
+
+}
+.main h4{
+    text-align: center;
+    padding-top: 0.8em;
+    background: #fff;
+    margin-bottom: 0;
+}
+.main p{
+    text-align: center;
+    font-size: 1em;
+    color: #777;
+    padding: 30px;
+}
+.main .col-md-3{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.main .row{
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.main .color{
+    background: #fff;
+    padding-top: 10px;
+    padding-bottom:10px;
+    box-shadow: 1px 1px 18px grey;
+}
+
+
+/*fintness部分*/
+.fintness{
+    background: #fff;
+}
+li{
+    list-style: none;
+}
+.fintness img{
+    width:100%;
+}
+.fintness .col-md-4{
+    padding-left: 0;
+    padding-right: 0;
+    background: #1E1E1E;
+    color: #fff;
+}
+.fintness .row{
+    margin-left: 0;
+    margin-right: 0;
+}
+.fintness .exid{
+    padding-top: 98px;
+    padding-bottom: 99px;
+    padding-left: 15px;
+    padding-right:15px;
+}
+.fintness .exid2{
+    padding-top: 108px;
+    padding-bottom: 109px;
+    padding-left: 15px;
+    padding-right:15px;
+}
+.fintness .exid1{
+    padding-top: 98px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #000;
+    background: #fff;
+}
+.fintness p{
+    margin-bottom: 0;
+    line-height: 25px;
+}
+.fintness h2{
+    text-transform: capitalize;
+}
+.fintness .exid1 p{
+    color:#777;
+}
+.fintness .col-md-8{
+    padding-left: 0;
+    padding-right: 0;
+}
+@media(max-width: 768px) {
+    .fintness .exid,.fintness .exid1,.fintness .exid2{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+
+
+.footer-top{
+    background: #333;
+    color: #fff;
+}
+.footer-top h5{
+    font-size: 32px;
+    font-family:Gabriola ;
+}
+.footer-top p{
+    color:#eee;
+    line-height:1.4em;
+}
+.footer-top ul li a{
+    background: url("../images/arrow1.png") no-repeat;
+    color: #eee;
+    padding-left: 2em;
+    line-height: 2em ;
+}
+.footer-top ul li a:hover{
+    color:grey;
+    text-decoration: none;
+}
+.footer-bottom{
+    background: #1E1E1E;
+    padding-top: 28px;
+    padding-bottom: 28px;
+}
+
+
+
+
+/*about页*/
+.about .banner{
+    background: url("../images/banner1.jpg") no-repeat;
+    width:100%;
+    background-size:cover;
+}
+.about .banner p{
+    padding-top: 0;
+    padding-bottom: 0;
+}

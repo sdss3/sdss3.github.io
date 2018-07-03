@@ -3,7 +3,9 @@
 //轮播图
 var swiper = new Swiper('.swiper-container', {
     spaceBetween: 30,
+//    间隙，空隙
     centeredSlides: true,
+//    设定为true时，活动块会居中，而不是默认状态下的居左。
     autoplay: {
         delay: 2500,
         disableOnInteraction: false,
@@ -12,6 +14,7 @@ var swiper = new Swiper('.swiper-container', {
         el: '.swiper-pagination',
         clickable: true,
     },
+//    分页插件
 });
 
 
@@ -696,6 +699,7 @@ var wh = window.innerHeight,
     sortnav = document.querySelector(".sortnav");
 if(sh0!== null){
     var sh = sh0.clientHeight;
+//    内部可视区高度
     console.log(wh-sh-nh);
     sortnav.style.height = wh-sh-nh+"px";
     var sortlist=document.querySelector(".sort-list");
